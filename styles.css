@@ -1800,6 +1800,12 @@ h3 {
 
   .hero-art {
     min-height: 29rem;
+    background: var(--white);
+  }
+
+  .hero-tabs,
+  .vertical-note {
+    display: none;
   }
 
   .machine-hero,
@@ -1921,10 +1927,6 @@ h3 {
 
   .hero-glyph {
     inset: 8% -22% 9% 0;
-  }
-
-  .vertical-note {
-    right: 1rem;
   }
 
   .book-card {
