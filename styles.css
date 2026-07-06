@@ -1498,7 +1498,7 @@ h3 {
 
 .threads-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
   min-height: calc(100vh - 5rem);
   margin-left: 2rem;
   border-bottom: 1px solid rgba(20, 18, 21, 0.18);
@@ -1510,16 +1510,17 @@ h3 {
 .threads-hero-copy {
   align-self: center;
   padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 6vw, 5rem);
+  min-width: 0;
 }
 
 .threads-hero h1 {
-  max-width: 7ch;
+  max-width: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4.6rem, 12.5vw, 11rem);
+  font-size: clamp(5rem, 9.7vw, 9.2rem);
   font-weight: 400;
-  line-height: 0.82;
-  /*text-transform: uppercase;*/
+  line-height: 0.88;
+  text-transform: none;
 }
 
 .threads-hero-copy > p:not(.eyebrow) {
@@ -1562,6 +1563,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 60% 50%;
   opacity: 0.92;
 }
 
