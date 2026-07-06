@@ -1513,13 +1513,13 @@ h3 {
 }
 
 .threads-hero h1 {
-  max-width: 6ch;
+  max-width: 7ch;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(5.5rem, 16vw, 13rem);
+  font-size: clamp(4.6rem, 12.5vw, 11rem);
   font-weight: 400;
-  line-height: 0.78;
-  text-transform: none;
+  line-height: 0.82;
+  text-transform: uppercase;
 }
 
 .threads-hero-copy > p:not(.eyebrow) {
@@ -1565,15 +1565,6 @@ h3 {
   opacity: 0.92;
 }
 
-.threads-cover-object {
-  position: absolute;
-  right: clamp(2rem, 6vw, 6rem);
-  bottom: clamp(2rem, 6vw, 5rem);
-  width: min(24rem, 44%);
-  border: 1px solid rgba(247, 244, 236, 0.76);
-  box-shadow: 1.1rem 1.1rem 0 rgba(20, 18, 21, 0.32);
-}
-
 .threads-rule {
   position: absolute;
   top: 0;
@@ -1592,7 +1583,6 @@ h3 {
 }
 
 .threads-intro,
-.threads-keystones,
 .threads-buy {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
@@ -1603,7 +1593,6 @@ h3 {
 }
 
 .threads-intro h2,
-.threads-section-copy h2,
 .threads-buy h2 {
   max-width: 10ch;
   margin: 0;
@@ -1631,57 +1620,6 @@ h3 {
 
 .threads-intro-panel p + p {
   margin-top: 1rem;
-}
-
-.threads-keystones {
-  grid-template-columns: minmax(17rem, 0.4fr) minmax(0, 1fr);
-  background:
-    linear-gradient(180deg, rgba(127, 44, 131, 0.08), transparent 48%),
-    var(--threads-paper);
-}
-
-.threads-keystone-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 1.5rem);
-  align-items: start;
-}
-
-.threads-keystone-grid article {
-  background: var(--threads-ink);
-  color: var(--threads-paper);
-  transform: rotate(var(--tilt, -1deg));
-}
-
-.threads-keystone-grid article:nth-child(2) {
-  --tilt: 1.2deg;
-}
-
-.threads-keystone-grid article:nth-child(3) {
-  --tilt: -0.6deg;
-}
-
-.threads-keystone-grid img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.55;
-  object-fit: cover;
-  border-bottom: 1px solid rgba(247, 244, 236, 0.28);
-}
-
-.threads-keystone-grid h3 {
-  margin: 1rem 1rem 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  font-weight: 400;
-  line-height: 0.9;
-  text-transform: none;
-}
-
-.threads-keystone-grid p {
-  margin: 0.9rem 1rem 1.2rem;
-  color: rgba(247, 244, 236, 0.78);
-  line-height: 1.42;
 }
 
 .threads-memory-spread {
@@ -1759,7 +1697,6 @@ h3 {
   .clock-status,
   .threads-hero,
   .threads-intro,
-  .threads-keystones,
   .threads-buy,
   .about-section,
   .site-footer {
@@ -1818,17 +1755,6 @@ h3 {
     min-height: 36rem;
   }
 
-  .threads-cover-object {
-    width: min(19rem, 42%);
-  }
-
-  .threads-keystone-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .threads-keystone-grid article {
-    transform: none;
-  }
 }
 
 @media (max-width: 680px) {
@@ -1874,7 +1800,6 @@ h3 {
   .clock-status,
   .threads-hero-copy,
   .threads-intro,
-  .threads-keystones,
   .threads-buy {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -1926,7 +1851,6 @@ h3 {
 
   .threads-hero,
   .threads-intro,
-  .threads-keystones,
   .threads-memory-spread,
   .threads-buy {
     margin-left: 0;
@@ -1937,17 +1861,11 @@ h3 {
   }
 
   .threads-hero h1 {
-    font-size: clamp(5rem, 24vw, 8rem);
+    font-size: clamp(4rem, 18vw, 7rem);
   }
 
   .threads-hero-art {
     min-height: 31rem;
-  }
-
-  .threads-cover-object {
-    right: 1rem;
-    bottom: 1rem;
-    width: min(15rem, 48%);
   }
 
   .threads-intro-panel {
