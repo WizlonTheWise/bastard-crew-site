@@ -1460,6 +1460,283 @@ h3 {
   font-size: 0.86rem;
 }
 
+.threads-page {
+  --threads-paper: #f7f4ec;
+  --threads-ink: #141215;
+  --threads-muted: #6f6462;
+  --threads-violet: #7f2c83;
+  --threads-cyan: #76e7e2;
+  --threads-rust: #9a4a22;
+  --threads-gold: #c9761d;
+  background: var(--threads-paper);
+  color: var(--threads-ink);
+}
+
+.threads-header {
+  background: rgba(247, 244, 236, 0.94);
+}
+
+.threads-header .nav-cta {
+  background: var(--threads-ink);
+  color: var(--threads-paper);
+}
+
+.threads-rail {
+  background: rgba(247, 244, 236, 0.9);
+  color: var(--threads-ink);
+}
+
+.threads-page .eyebrow {
+  color: var(--threads-rust);
+}
+
+.threads-page h1,
+.threads-page h2,
+.threads-page h3 {
+  letter-spacing: 0;
+}
+
+.threads-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  min-height: calc(100vh - 5rem);
+  margin-left: 2rem;
+  border-bottom: 1px solid rgba(20, 18, 21, 0.18);
+  background:
+    linear-gradient(90deg, transparent 0 48%, rgba(20, 18, 21, 0.05) 48% 48.12%, transparent 48.12%),
+    var(--threads-paper);
+}
+
+.threads-hero-copy {
+  align-self: center;
+  padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 6vw, 5rem);
+}
+
+.threads-hero h1 {
+  max-width: 6ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5.5rem, 16vw, 13rem);
+  font-weight: 400;
+  line-height: 0.78;
+  text-transform: none;
+}
+
+.threads-hero-copy > p:not(.eyebrow) {
+  max-width: 34rem;
+  margin: 1.8rem 0 0;
+  font-size: clamp(1.05rem, 1.45vw, 1.4rem);
+  line-height: 1.45;
+}
+
+.threads-actions,
+.threads-buy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.threads-actions .button.primary,
+.threads-buy .button.primary {
+  background: var(--threads-ink);
+  color: var(--threads-paper);
+}
+
+.threads-actions .button.secondary {
+  background: var(--threads-paper);
+  color: var(--threads-ink);
+}
+
+.threads-hero-art {
+  position: relative;
+  min-height: 42rem;
+  overflow: hidden;
+  background: var(--threads-ink);
+}
+
+.threads-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.threads-cover-object {
+  position: absolute;
+  right: clamp(2rem, 6vw, 6rem);
+  bottom: clamp(2rem, 6vw, 5rem);
+  width: min(24rem, 44%);
+  border: 1px solid rgba(247, 244, 236, 0.76);
+  box-shadow: 1.1rem 1.1rem 0 rgba(20, 18, 21, 0.32);
+}
+
+.threads-rule {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(247, 244, 236, 0.78);
+}
+
+.threads-rule.rule-one {
+  left: 10%;
+}
+
+.threads-rule.rule-two {
+  left: 13%;
+  background: rgba(201, 118, 29, 0.86);
+}
+
+.threads-intro,
+.threads-keystones,
+.threads-buy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-left: 2rem;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 5vw, 5rem);
+  border-bottom: 1px solid rgba(20, 18, 21, 0.18);
+}
+
+.threads-intro h2,
+.threads-section-copy h2,
+.threads-buy h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7.2vw, 7rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: none;
+}
+
+.threads-intro-panel {
+  max-width: 43rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  border-left: 2px solid var(--threads-gold);
+  background: #fffdf7;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  line-height: 1.52;
+  box-shadow: 1rem 1rem 0 rgba(127, 44, 131, 0.14);
+}
+
+.threads-intro-panel p {
+  margin: 0;
+}
+
+.threads-intro-panel p + p {
+  margin-top: 1rem;
+}
+
+.threads-keystones {
+  grid-template-columns: minmax(17rem, 0.4fr) minmax(0, 1fr);
+  background:
+    linear-gradient(180deg, rgba(127, 44, 131, 0.08), transparent 48%),
+    var(--threads-paper);
+}
+
+.threads-keystone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+}
+
+.threads-keystone-grid article {
+  background: var(--threads-ink);
+  color: var(--threads-paper);
+  transform: rotate(var(--tilt, -1deg));
+}
+
+.threads-keystone-grid article:nth-child(2) {
+  --tilt: 1.2deg;
+}
+
+.threads-keystone-grid article:nth-child(3) {
+  --tilt: -0.6deg;
+}
+
+.threads-keystone-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(247, 244, 236, 0.28);
+}
+
+.threads-keystone-grid h3 {
+  margin: 1rem 1rem 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: none;
+}
+
+.threads-keystone-grid p {
+  margin: 0.9rem 1rem 1.2rem;
+  color: rgba(247, 244, 236, 0.78);
+  line-height: 1.42;
+}
+
+.threads-memory-spread {
+  position: relative;
+  min-height: 42rem;
+  margin-left: 2rem;
+  overflow: hidden;
+  background: var(--threads-ink);
+}
+
+.threads-memory-spread > img {
+  width: 100%;
+  min-height: 42rem;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.threads-memory-card {
+  position: absolute;
+  left: clamp(1.5rem, 7vw, 7rem);
+  top: 50%;
+  width: min(29rem, calc(100% - 3rem));
+  padding: clamp(1.25rem, 2.8vw, 2.4rem);
+  background: #fffdf7;
+  transform: translateY(-50%);
+  box-shadow: 1rem 1rem 0 rgba(20, 18, 21, 0.3);
+}
+
+.threads-memory-card h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: none;
+}
+
+.threads-memory-card p:not(.eyebrow) {
+  margin: 1rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.threads-buy {
+  align-items: end;
+  margin-top: 0;
+  background: #fffdf7;
+}
+
+.threads-buy .button {
+  justify-self: start;
+  margin-top: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1480,6 +1757,10 @@ h3 {
   .clock-hero,
   .clock-briefing,
   .clock-status,
+  .threads-hero,
+  .threads-intro,
+  .threads-keystones,
+  .threads-buy,
   .about-section,
   .site-footer {
     grid-template-columns: 1fr;
@@ -1532,6 +1813,22 @@ h3 {
   .clock-hero-system {
     min-height: 31rem;
   }
+
+  .threads-hero-art {
+    min-height: 36rem;
+  }
+
+  .threads-cover-object {
+    width: min(19rem, 42%);
+  }
+
+  .threads-keystone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threads-keystone-grid article {
+    transform: none;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1574,7 +1871,11 @@ h3 {
   .machine-buy,
   .clock-hero-copy,
   .clock-briefing,
-  .clock-status {
+  .clock-status,
+  .threads-hero-copy,
+  .threads-intro,
+  .threads-keystones,
+  .threads-buy {
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -1621,6 +1922,45 @@ h3 {
   .clock-briefing-grid,
   .clock-glyphs {
     grid-template-columns: 1fr;
+  }
+
+  .threads-hero,
+  .threads-intro,
+  .threads-keystones,
+  .threads-memory-spread,
+  .threads-buy {
+    margin-left: 0;
+  }
+
+  .threads-hero {
+    min-height: auto;
+  }
+
+  .threads-hero h1 {
+    font-size: clamp(5rem, 24vw, 8rem);
+  }
+
+  .threads-hero-art {
+    min-height: 31rem;
+  }
+
+  .threads-cover-object {
+    right: 1rem;
+    bottom: 1rem;
+    width: min(15rem, 48%);
+  }
+
+  .threads-intro-panel {
+    font-size: 1.06rem;
+  }
+
+  .threads-memory-card {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    margin: -10rem 1rem 2rem;
+    transform: none;
   }
 
   .clock-briefing-grid article,

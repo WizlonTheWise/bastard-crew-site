@@ -51,6 +51,11 @@ const signupForm = document.querySelector(".signup-form");
 const logoLinks = document.querySelectorAll(".logo-link");
 const heroGlyph = document.querySelector(".hero-glyph");
 const scrollFloatItems = document.querySelectorAll(".scroll-float");
+const bookPageLinks = {
+  "This Machine Has Meat In It": "tmhmit.html",
+  "Clock Watchers": "clock-watchers.html",
+  Threads: "threads.html"
+};
 
 if (bookGrid) {
   bookGrid.innerHTML = books
@@ -73,8 +78,8 @@ if (bookGrid) {
             </div>
           </div>
           ${
-            book.title === "This Machine Has Meat In It" || book.title === "Clock Watchers"
-              ? `<a class="book-card-link" href="${book.title === "Clock Watchers" ? "clock-watchers.html" : "tmhmit.html"}" aria-label="Open ${book.title} page"></a>`
+            bookPageLinks[book.title]
+              ? `<a class="book-card-link" href="${bookPageLinks[book.title]}" aria-label="Open ${book.title} page"></a>`
               : ""
           }
         </article>
