@@ -1185,7 +1185,7 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: min(48rem, 94%);
   border: 1px solid var(--clock-yellow);
-  background: var(--clock-black);
+  background: var(--clock-yellow);
   box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.38);
 }
 
@@ -1196,28 +1196,15 @@ h3 {
   margin: 0;
   padding: clamp(1.2rem, 2.4vw, 2rem);
   place-items: center;
-  border: 1px solid var(--clock-yellow);
-  background:
-    linear-gradient(135deg, transparent 0 68%, var(--clock-yellow) 68%),
-    var(--clock-paper);
+  border: 1px solid var(--clock-black);
+  background: var(--clock-yellow);
 }
 
 .clock-hero-glyphs img {
   display: block;
-  width: min(14rem, 82%);
-  max-height: 14rem;
-}
-
-.clock-hero-glyphs figcaption {
-  position: absolute;
-  left: 0.68rem;
-  bottom: 0.68rem;
-  padding: 0.36rem 0.5rem;
-  background: var(--clock-black);
-  color: var(--clock-yellow);
-  font-size: 0.68rem;
-  font-weight: 900;
-  text-transform: uppercase;
+  width: min(15.5rem, 88%);
+  max-height: 15.5rem;
+  filter: brightness(0) saturate(100%);
 }
 
 .clock-briefing {
