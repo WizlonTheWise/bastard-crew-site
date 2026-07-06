@@ -993,9 +993,9 @@ h3 {
 
 .meat-text-field {
   position: absolute;
-  inset: -28% 0.2rem -34% 1rem;
+  inset: -28% -5vw -34% -4vw;
   display: grid;
-  grid-template-columns: repeat(36, minmax(0, 1fr));
+  grid-template-columns: repeat(48, minmax(0, 1fr));
   gap: clamp(0rem, 0.04vw, 0.04rem);
   align-items: stretch;
   overflow: hidden;
@@ -1017,7 +1017,7 @@ h3 {
   text-transform: uppercase;
   opacity: var(--meat-column-opacity, 0.4);
   pointer-events: none;
-  transform: translate3d(0, var(--meat-shift-y, 0), 0);
+  transform: translate3d(var(--meat-shift-x, 0), var(--meat-shift-y, 0), 0);
   transition:
     color 160ms ease,
     opacity 160ms ease;
@@ -1027,7 +1027,7 @@ h3 {
   display: block;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: clamp(0.92rem, 1.55vw, 2.5rem);
+  font-size: clamp(0.82rem, 1.18vw, 2.08rem);
   letter-spacing: 0;
 }
 
@@ -1362,8 +1362,8 @@ h3 {
   }
 
   .meat-text-field {
-    inset: -22% 0.2rem -30%;
-    grid-template-columns: repeat(16, minmax(0, 1fr));
+    inset: -22% -8vw -30%;
+    grid-template-columns: repeat(22, minmax(0, 1fr));
     gap: 0.01rem;
   }
 
@@ -1372,7 +1372,7 @@ h3 {
   }
 
   .meat-reveal-column span {
-    font-size: clamp(0.92rem, 4.8vw, 2.08rem);
+    font-size: clamp(0.78rem, 3.55vw, 1.82rem);
   }
 
   .kill-target {

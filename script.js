@@ -223,17 +223,38 @@ if (!prefersReducedMotion && meatReveal) {
   });
 
   if (textField) {
-    originalColumns.forEach((column, index) => {
-      const clone = column.cloneNode(true);
-      const drift = Number(column.dataset.drift || 0);
-      clone.dataset.drift = `${Math.round(drift * -0.82)}`;
+    for (let pass = 0; pass < 2; pass += 1) {
+      originalColumns.forEach((column, index) => {
+        const clone = column.cloneNode(true);
+        const drift = Number(column.dataset.drift || 0);
+        const cloneIndex = index + originalColumns.length * pass;
+        clone.dataset.drift = `${Math.round(drift * (pass === 0 ? -0.82 : 0.64))}`;
+        clone.dataset.phase = `${(cloneIndex * 137) % 360}`;
+        clone.dataset.speed = `${0.16 + (cloneIndex % 7) * 0.026}`;
+        clone.querySelectorAll(".kill-target").forEach((target) => target.classList.remove("kill-target"));
+        appendPhrase(clone, extraPhrases[(cloneIndex + 5) % extraPhrases.length], cloneIndex + 2);
+        appendPhrase(clone, extraPhrases[(cloneIndex + 17) % extraPhrases.length], cloneIndex + 3);
+        textField.append(clone);
+      });
+    }
+  }
+
+  if (textField) {
+    const currentCount = textField.querySelectorAll(".meat-reveal-column").length;
+    const targetCount = Math.max(48, currentCount);
+
+    for (let index = currentCount; index < targetCount; index += 1) {
+      const source = originalColumns[index % originalColumns.length];
+      const clone = source.cloneNode(true);
+      const drift = Number(source.dataset.drift || 0);
+      clone.dataset.drift = `${Math.round(drift * (index % 2 === 0 ? -0.52 : 0.48))}`;
       clone.dataset.phase = `${(index * 137) % 360}`;
-      clone.dataset.speed = `${0.18 + (index % 5) * 0.035}`;
+      clone.dataset.speed = `${0.16 + (index % 7) * 0.026}`;
       clone.querySelectorAll(".kill-target").forEach((target) => target.classList.remove("kill-target"));
       appendPhrase(clone, extraPhrases[(index + 5) % extraPhrases.length], index + 2);
       appendPhrase(clone, extraPhrases[(index + 17) % extraPhrases.length], index + 3);
       textField.append(clone);
-    });
+    }
   }
 
   const revealColumns = meatReveal.querySelectorAll(".meat-reveal-column");
@@ -241,9 +262,11 @@ if (!prefersReducedMotion && meatReveal) {
   revealColumns.forEach((column, index) => {
     column.dataset.phase = column.dataset.phase || `${(index * 73) % 360}`;
     column.dataset.speed = column.dataset.speed || `${0.16 + (index % 6) * 0.03}`;
+    const stagger = ((index % 4) - 1.5) * 0.42;
+    column.style.setProperty("--meat-shift-x", `${stagger.toFixed(2)}rem`);
     const original = column.innerHTML;
-    column.insertAdjacentHTML("afterbegin", original.repeat(8));
-    column.insertAdjacentHTML("beforeend", original.repeat(8));
+    column.insertAdjacentHTML("afterbegin", original.repeat(7));
+    column.insertAdjacentHTML("beforeend", original.repeat(7));
   });
 
   const updateMeatReveal = (timestamp = 0) => {
