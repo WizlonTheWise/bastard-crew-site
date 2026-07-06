@@ -1083,6 +1083,227 @@ h3 {
   color: var(--machine-dark);
 }
 
+.clock-page {
+  --clock-yellow: #f5c51f;
+  --clock-black: #151316;
+  --clock-paper: #f8f7f1;
+  --clock-grey: #dedbd2;
+  --clock-red: #f25045;
+  background:
+    linear-gradient(90deg, transparent 0 2rem, rgba(21, 19, 22, 0.18) 2rem 2.08rem, transparent 2.08rem),
+    var(--clock-yellow);
+  color: var(--clock-black);
+}
+
+.clock-page .site-header {
+  background: rgba(248, 247, 241, 0.94);
+  border-bottom-color: var(--clock-black);
+}
+
+.clock-page .nav-cta {
+  background: var(--clock-yellow);
+  color: var(--clock-black);
+}
+
+.clock-rail {
+  border-right-color: rgba(21, 19, 22, 0.32);
+  background: rgba(248, 247, 241, 0.84);
+}
+
+.clock-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(20rem, 0.74fr);
+  min-height: calc(100vh - 5rem);
+  background:
+    repeating-linear-gradient(90deg, transparent 0 1.6rem, rgba(21, 19, 22, 0.2) 1.6rem 1.95rem),
+    var(--clock-yellow);
+  overflow: hidden;
+}
+
+.clock-hero-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 5vw, 4.5rem);
+}
+
+.clock-hero .eyebrow,
+.clock-briefing .eyebrow,
+.clock-status .eyebrow {
+  color: var(--clock-black);
+}
+
+.clock-hero h1 {
+  max-width: 8ch;
+  font-size: clamp(4rem, 10.5vw, 11rem);
+  line-height: 0.78;
+}
+
+.clock-hero-copy p:not(.eyebrow) {
+  max-width: 35rem;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+}
+
+.clock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.3rem;
+}
+
+.clock-page .button.primary {
+  background: var(--clock-black);
+  color: var(--clock-yellow);
+}
+
+.clock-page .button.secondary {
+  background: var(--clock-paper);
+  color: var(--clock-black);
+}
+
+.clock-hero-system {
+  position: relative;
+  display: grid;
+  min-height: 34rem;
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
+  place-items: center;
+  background:
+    radial-gradient(circle, rgba(21, 19, 22, 0.92) 0 0.28rem, transparent 0.31rem) 0 0 / 4.8rem 4.8rem,
+    var(--clock-black);
+}
+
+.clock-cover-frame {
+  position: relative;
+  z-index: 1;
+  width: min(30rem, 82%);
+  border: 0.8rem solid var(--clock-yellow);
+  background: var(--clock-yellow);
+  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.38);
+}
+
+.clock-cover-frame img {
+  display: block;
+  width: 100%;
+  background: var(--clock-yellow);
+}
+
+.clock-scan-strip {
+  position: absolute;
+  inset: 7% auto 7% 8%;
+  display: grid;
+  grid-template-columns: repeat(6, 0.58rem);
+  gap: 0.74rem;
+  opacity: 0.92;
+}
+
+.clock-scan-strip span {
+  display: block;
+  background: var(--clock-yellow);
+}
+
+.clock-briefing {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 5vw, 4.5rem);
+  background: var(--clock-paper);
+}
+
+.clock-briefing h2,
+.clock-status h2 {
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.88;
+}
+
+.clock-briefing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.clock-briefing-grid article {
+  min-height: 17rem;
+  padding: 1rem;
+  border: 1px solid var(--clock-black);
+  background:
+    linear-gradient(0deg, transparent 0 64%, var(--clock-yellow) 64%),
+    var(--white);
+}
+
+.clock-briefing-grid span {
+  display: inline-grid;
+  width: 2.1rem;
+  aspect-ratio: 1;
+  place-items: center;
+  background: var(--clock-black);
+  color: var(--clock-yellow);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.clock-briefing-grid h3 {
+  margin-top: 4.7rem;
+  font-size: clamp(1.6rem, 2.8vw, 2.7rem);
+  line-height: 0.9;
+}
+
+.clock-briefing-grid p {
+  color: var(--muted);
+}
+
+.clock-glyphs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  background: var(--clock-black);
+}
+
+.clock-glyphs figure {
+  position: relative;
+  display: grid;
+  min-height: 19rem;
+  margin: 0;
+  padding: 2.2rem;
+  place-items: center;
+  background:
+    linear-gradient(135deg, transparent 0 68%, var(--clock-yellow) 68%),
+    var(--clock-paper);
+}
+
+.clock-glyphs img {
+  width: min(10rem, 72%);
+  max-height: 10rem;
+}
+
+.clock-glyphs figcaption {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.8rem;
+  padding: 0.38rem 0.5rem;
+  background: var(--clock-black);
+  color: var(--clock-yellow);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clock-status {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(16rem, 0.45fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 5vw, 4.5rem);
+  background: var(--clock-yellow);
+}
+
+.clock-status p:not(.eyebrow) {
+  color: var(--clock-black);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .book-card,
   .book-card::after,
@@ -1257,6 +1478,9 @@ h3 {
   .machine-hero,
   .machine-reports,
   .machine-buy,
+  .clock-hero,
+  .clock-briefing,
+  .clock-status,
   .about-section,
   .site-footer {
     grid-template-columns: 1fr;
@@ -1300,6 +1524,15 @@ h3 {
   .machine-buy {
     align-items: start;
   }
+
+  .clock-briefing-grid,
+  .clock-glyphs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clock-hero-system {
+    min-height: 31rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1339,7 +1572,10 @@ h3 {
   .machine-hero,
   .machine-reports,
   .meat-reveal-sticky,
-  .machine-buy {
+  .machine-buy,
+  .clock-hero-copy,
+  .clock-briefing,
+  .clock-status {
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -1355,6 +1591,33 @@ h3 {
 
   .machine-glyph-strip {
     grid-template-columns: 1fr;
+  }
+
+  .clock-hero {
+    min-height: auto;
+  }
+
+  .clock-hero h1 {
+    font-size: clamp(3.8rem, 17vw, 6.6rem);
+  }
+
+  .clock-hero-system {
+    min-height: 25rem;
+  }
+
+  .clock-cover-frame {
+    width: min(24rem, 88%);
+    border-width: 0.55rem;
+  }
+
+  .clock-briefing-grid,
+  .clock-glyphs {
+    grid-template-columns: 1fr;
+  }
+
+  .clock-briefing-grid article,
+  .clock-glyphs figure {
+    min-height: 14rem;
   }
 
   .meat-reveal {

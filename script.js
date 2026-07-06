@@ -73,8 +73,8 @@ if (bookGrid) {
             </div>
           </div>
           ${
-            book.title === "This Machine Has Meat In It"
-              ? `<a class="book-card-link" href="tmhmit.html" aria-label="Open This Machine Has Meat In It page"></a>`
+            book.title === "This Machine Has Meat In It" || book.title === "Clock Watchers"
+              ? `<a class="book-card-link" href="${book.title === "Clock Watchers" ? "clock-watchers.html" : "tmhmit.html"}" aria-label="Open ${book.title} page"></a>`
               : ""
           }
         </article>
