@@ -3,9 +3,9 @@
   --black: #050505;
   --ink: #111111;
   --muted: #5d5d57;
-  --paper: #f8f7f1;
-  --paper-cool: #f0f0ec;
-  --paper-warm: #ebe7dc;
+  --paper: #ffffff;
+  --paper-cool: #ffffff;
+  --paper-warm: #ffffff;
   --blue: #0069d9;
   --yellow: #ffe100;
   --red: #f25045;
@@ -14,7 +14,7 @@
   --pink: #ff3ea5;
   --teal-dark: #174f52;
   --grey-meat: #8d817c;
-  --white: #fffefa;
+  --white: #ffffff;
 }
 
 * {
@@ -54,7 +54,7 @@ a {
   width: 2rem;
   padding: 5rem 0 1rem;
   border-right: 1px solid rgba(5, 5, 5, 0.16);
-  background: rgba(248, 247, 241, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--black);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.74rem;
@@ -81,7 +81,7 @@ main,
   gap: 1.5rem;
   min-height: 4.8rem;
   padding: 0 clamp(1rem, 4vw, 3rem);
-  background: rgba(248, 247, 241, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid rgba(5, 5, 5, 0.24);
 }
 
@@ -212,6 +212,7 @@ main,
 .hero::before {
   content: "";
   position: absolute;
+  z-index: 0;
   top: 6.8rem;
   left: 45%;
   width: 18rem;
@@ -220,6 +221,8 @@ main,
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1086,7 +1089,7 @@ h3 {
 .clock-page {
   --clock-yellow: #f5c51f;
   --clock-black: #151316;
-  --clock-paper: #f8f7f1;
+  --clock-paper: #ffffff;
   --clock-grey: #dedbd2;
   --clock-red: #f25045;
   background:
@@ -1096,7 +1099,7 @@ h3 {
 }
 
 .clock-page .site-header {
-  background: rgba(248, 247, 241, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom-color: var(--clock-black);
 }
 
@@ -1107,7 +1110,7 @@ h3 {
 
 .clock-rail {
   border-right-color: rgba(21, 19, 22, 0.32);
-  background: rgba(248, 247, 241, 0.84);
+  background: rgba(255, 255, 255, 0.84);
 }
 
 .clock-hero {
@@ -1384,7 +1387,7 @@ h3 {
 
 .stats div {
   padding: 1.25rem;
-  border: 1px solid rgba(248, 247, 241, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .stats div:nth-child(2) {
@@ -1461,7 +1464,7 @@ h3 {
 }
 
 .threads-page {
-  --threads-paper: #f7f4ec;
+  --threads-paper: #ffffff;
   --threads-ink: #141215;
   --threads-muted: #6f6462;
   --threads-violet: #7f2c83;
@@ -1473,7 +1476,7 @@ h3 {
 }
 
 .threads-header {
-  background: rgba(247, 244, 236, 0.94);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .threads-header .nav-cta {
@@ -1482,7 +1485,7 @@ h3 {
 }
 
 .threads-rail {
-  background: rgba(247, 244, 236, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--threads-ink);
 }
 
@@ -1572,7 +1575,7 @@ h3 {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(247, 244, 236, 0.78);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .threads-rule.rule-one {
@@ -1609,7 +1612,7 @@ h3 {
   max-width: 43rem;
   padding: clamp(1.4rem, 3vw, 2.5rem);
   border-left: 2px solid var(--threads-gold);
-  background: #fffdf7;
+  background: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.15rem, 1.5vw, 1.45rem);
   line-height: 1.52;
@@ -1645,7 +1648,7 @@ h3 {
   top: 50%;
   width: min(29rem, calc(100% - 3rem));
   padding: clamp(1.25rem, 2.8vw, 2.4rem);
-  background: #fffdf7;
+  background: #ffffff;
   transform: translateY(-50%);
   box-shadow: 1rem 1rem 0 rgba(20, 18, 21, 0.3);
 }
@@ -1669,7 +1672,7 @@ h3 {
 .threads-buy {
   align-items: end;
   margin-top: 0;
-  background: #fffdf7;
+  background: #ffffff;
 }
 
 .threads-buy .button {
@@ -1762,6 +1765,12 @@ h3 {
 @media (max-width: 680px) {
   body {
     background: var(--paper);
+  }
+
+  .scroll-float {
+    transform: none !important;
+    transition: none;
+    will-change: auto;
   }
 
   .page-rail {
@@ -1928,6 +1937,8 @@ h3 {
 
   .book-cover {
     max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .signup-form div {

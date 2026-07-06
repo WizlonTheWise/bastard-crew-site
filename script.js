@@ -5,7 +5,7 @@ const books = [
     className: "cover-machine",
     coverImage: "assets/tmhmit-front-cover.png",
     description:
-      "A game about killing the eldritch nightmare that is your job. Office procedure, occult meat, and corporate documents that should never have left the building.",
+      "A game about killing the eldritch nightmare that is your job. Office procedureal, occult rituals, and a mess of deplorable corporate jargon.",
     tags: ["66 pages", "A5", "Comedy horror"]
   },
   {
@@ -14,7 +14,7 @@ const books = [
     className: "cover-clock",
     coverImage: "assets/clock-watchers-cover.png",
     description:
-      "An unfinished guidebook for ordinary people abruptly promoted into interdimensional temporal espionage. Congratulations. Please ignore the mask.",
+      "A guidebook for ordinary people pressganged into interdimensional temporal espionage. Congratulations (insincere)",
     tags: ["In development", "A5", "Loops"]
   },
   {
@@ -23,7 +23,7 @@ const books = [
     className: "cover-threads",
     coverImage: "assets/threads-cover.jpg",
     description:
-      "A reflective game for returning to retired characters and old campaigns, tracing the long ripples they left across people, places, and years.",
+      "A reflective game for returning to retired characters and old campaigns, tracing the long ripples they left across people, places, and worlds.",
     tags: ["Finished", "Solo / group", "Memory"]
   },
   {
@@ -32,7 +32,7 @@ const books = [
     className: "cover-glyph",
     coverImage: "assets/glyph-cover.jpg",
     description:
-      "A finished artbook-manual for drawing personal magical symbols: vessels, lines of power, investitures, and the quiet terror of a spell doing exactly what you drew.",
+      "An artbook-grimoire for drawing personal magical symbols: vessels, lines of power, investitures, an introspective look at your own personal magical paradigm.",
     tags: ["Finished", "23 pages", "Glyphcraft"]
   },
   {
@@ -41,7 +41,7 @@ const books = [
     className: "cover-jazzmanji",
     coverImage: "assets/jazzmanji-cover.jpg",
     description:
-      "A fast dice-and-card cassette crawl where your band burns through tracks, spends Jazz Health, and tries to escape the accursed tape before the Jazzman gets the final solo.",
+      "A fast-paced dice-and-card cassette crawl where your band burns through tracks, and tries to escape the accursed tape before the Jazzman gets the final solo.",
     tags: ["Card game", "Dice", "Jazz health"]
   }
 ];
@@ -90,6 +90,7 @@ if (bookGrid) {
 
 const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const smallScreenMotion = window.matchMedia("(max-width: 680px)");
 
 if (!prefersReducedMotion && heroGlyph) {
   const blinkDuration = 420;
@@ -133,8 +134,20 @@ if (!prefersReducedMotion && scrollFloatItems.length) {
   let scrollTicking = false;
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+  const clearScrollFloats = () => {
+    scrollFloatItems.forEach((item) => {
+      item.style.removeProperty("--float-x");
+      item.style.removeProperty("--float-y");
+    });
+  };
 
   const updateScrollFloats = () => {
+    if (smallScreenMotion.matches) {
+      clearScrollFloats();
+      scrollTicking = false;
+      return;
+    }
+
     const viewportCenter = window.innerHeight / 2;
 
     scrollFloatItems.forEach((item) => {
@@ -165,6 +178,11 @@ if (!prefersReducedMotion && scrollFloatItems.length) {
   );
 
   window.addEventListener("resize", updateScrollFloats);
+  if (smallScreenMotion.addEventListener) {
+    smallScreenMotion.addEventListener("change", updateScrollFloats);
+  } else if (smallScreenMotion.addListener) {
+    smallScreenMotion.addListener(updateScrollFloats);
+  }
   updateScrollFloats();
 }
 
