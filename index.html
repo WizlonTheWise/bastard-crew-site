@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bastard Crew Games</title>
+    <meta
+      name="description"
+      content="A personal TTRPG creator website for showcasing books, play aids, and strange tabletop work."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <aside class="page-rail" aria-hidden="true">
+      <span>Books</span>
+      <span>About</span>
+      <span>Contact</span>
+    </aside>
+
+    <header class="site-header" id="top">
+      <div class="brand">
+        <div class="logo-stack" aria-label="Project links">
+          <a
+            class="logo-link logo-link-poly"
+            href="https://bastardcrew.itch.io"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Bastard Crew Games on itch.io"
+          >
+            <img src="assets/polyhedral-logo.svg" alt="">
+          </a>
+          <a
+            class="logo-link logo-link-oddments"
+            href="https://oddmentsoh.itch.io/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Oddments on itch.io"
+          >
+            <img src="assets/oddments-logomark.svg" alt="">
+          </a>
+        </div>
+        <a class="brand-copy" href="#top" aria-label="Bastard Crew Games home">
+          <strong>Bastard Crew Games</strong>
+          <small>cluichi rolimeartha / books, tools, field notes</small>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent tabletop roleplaying games / deanamh neamhspleach</p>
+          <h1 id="hero-title">Games about weird shit.</h1>
+          <p>
+            <strong>Bastard Crew x Oddments</strong> makes existential tabletop roleplaying games about life,
+            work, time, magic, memory, and the machinery society expect us to survive..
+          </p>
+          <p class="hero-jp" aria-label="Irish decorative label">leabhair bheaga / notai imeartha / saothair aisteacha</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#books">Browse books</a>
+            <a class="button secondary" href="#about">About the work</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="A typographic design composition for Bastard Crew Games">
+          <div class="hero-glyph scroll-float" data-depth="0.09" data-drift="-0.015" aria-hidden="true">
+            <span class="glyph-ring"></span>
+            <span class="glyph-stem"></span>
+            <span class="glyph-cross"></span>
+            <span class="glyph-shelf"></span>
+          </div>
+          <div class="hero-tabs scroll-float" data-depth="-0.05" data-drift="0.01" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="award-badges scroll-float" data-depth="0.13" data-drift="0.018" aria-label="Awards badges">
+            <img class="award-badge" src="assets/tmhmit-awards-badge.png" alt="The Awards 2023 badge">
+            <img class="award-badge award-badge-2024" src="assets/awards-24-winner-badge-dark.png" alt="The Awards 2024 winner badge">
+          </div>
+          <p class="vertical-note">leabhrain eachtraiochta</p>
+        </div>
+      </section>
+
+      <section class="section books-section" id="books" aria-labelledby="books-title">
+        <div class="section-heading">
+          <p class="eyebrow">Books / saothair</p>
+          <h2 id="books-title">Featured releases</h2>
+        </div>
+
+        <div class="book-grid" id="bookGrid"></div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">About / faoin udar</p>
+          <h2 id="about-title">Printed under Bastard Crew Games.</h2>
+          <p>
+            I make sharp, readable games with a mean little comic pulse: corporate horror,
+            ritual diagrams, time-loop espionage, post-campaign reflection, procedural play,
+            and graphic design that treats rules text like something you found in a suspicious
+            internal memo, a grimoire, or an onboarding handbook that already knows how you die.
+          </p>
+        </div>
+        <img class="about-creature scroll-float" data-depth="0.07" data-drift="-0.012" src="assets/tmhmit-tentacle-guy.png" alt="">
+        <dl class="stats">
+          <div>
+            <dt>A5</dt>
+            <dd>print-first books</dd>
+          </div>
+          <div>
+            <dt>170</dt>
+            <dd>pages of shtuff</dd>
+          </div>
+          <div>
+            <dt>&infin;</dt>
+            <dd>loops pending</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="eyebrow">Stay in the loop / litir</p>
+        <h2>Follow the next document before management redacts it.</h2>
+      </div>
+      <form class="signup-form">
+        <label for="email">Email address</label>
+        <div>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+          <button type="submit">Join list</button>
+        </div>
+        <p class="form-note">Replace this with Buttondown, Mailchimp, or your preferred newsletter later.</p>
+      </form>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
