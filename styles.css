@@ -1519,7 +1519,7 @@ h3 {
   font-size: clamp(4.6rem, 12.5vw, 11rem);
   font-weight: 400;
   line-height: 0.82;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .threads-hero-copy > p:not(.eyebrow) {
