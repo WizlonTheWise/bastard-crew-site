@@ -1183,28 +1183,24 @@ h3 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(48rem, 94%);
-  border: 1px solid var(--clock-yellow);
-  background: var(--clock-yellow);
-  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.38);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  width: min(42rem, 88%);
+  background: var(--clock-black);
 }
 
 .clock-hero-glyphs figure {
   position: relative;
   display: grid;
-  min-height: clamp(15rem, 20vw, 22rem);
+  min-height: clamp(12rem, 18vw, 19rem);
   margin: 0;
-  padding: clamp(1.2rem, 2.4vw, 2rem);
+  padding: 0;
   place-items: center;
-  border: 1px solid var(--clock-black);
-  background: var(--clock-yellow);
 }
 
 .clock-hero-glyphs img {
   display: block;
-  width: min(15.5rem, 88%);
-  max-height: 15.5rem;
-  filter: brightness(0) saturate(100%);
+  width: min(16.5rem, 92%);
+  max-height: 16.5rem;
 }
 
 .clock-briefing {
