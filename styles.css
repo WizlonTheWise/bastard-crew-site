@@ -1175,19 +1175,46 @@ h3 {
     var(--clock-black);
 }
 
-.clock-cover-frame {
+.clock-hero-glyphs {
   position: relative;
   z-index: 1;
-  width: min(30rem, 82%);
-  border: 0.8rem solid var(--clock-yellow);
-  background: var(--clock-yellow);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(38rem, 88%);
+  border: 1px solid var(--clock-yellow);
+  background: var(--clock-black);
   box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.38);
 }
 
-.clock-cover-frame img {
+.clock-hero-glyphs figure {
+  position: relative;
+  display: grid;
+  min-height: clamp(13rem, 17vw, 18rem);
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  place-items: center;
+  border: 1px solid var(--clock-yellow);
+  background:
+    linear-gradient(135deg, transparent 0 68%, var(--clock-yellow) 68%),
+    var(--clock-paper);
+}
+
+.clock-hero-glyphs img {
   display: block;
-  width: 100%;
-  background: var(--clock-yellow);
+  width: min(10.5rem, 68%);
+  max-height: 10.5rem;
+}
+
+.clock-hero-glyphs figcaption {
+  position: absolute;
+  left: 0.68rem;
+  bottom: 0.68rem;
+  padding: 0.36rem 0.5rem;
+  background: var(--clock-black);
+  color: var(--clock-yellow);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .clock-scan-strip {
@@ -1605,9 +1632,13 @@ h3 {
     min-height: 25rem;
   }
 
-  .clock-cover-frame {
+  .clock-hero-glyphs {
     width: min(24rem, 88%);
-    border-width: 0.55rem;
+  }
+
+  .clock-hero-glyphs figure {
+    min-height: 11.5rem;
+    padding: 1.2rem;
   }
 
   .clock-briefing-grid,
