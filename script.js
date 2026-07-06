@@ -166,18 +166,87 @@ if (!prefersReducedMotion && scrollFloatItems.length) {
 const meatReveal = document.querySelector(".meat-reveal");
 
 if (!prefersReducedMotion && meatReveal) {
-  const revealColumns = meatReveal.querySelectorAll(".meat-reveal-column");
+  const textField = meatReveal.querySelector(".meat-text-field");
+  const originalColumns = Array.from(meatReveal.querySelectorAll(".meat-reveal-column"));
   const revealTarget = meatReveal.querySelector(".kill-target");
+  const extraPhrases = [
+    "Quitte ton travail",
+    "Deixa o teu trabalho",
+    "Lasă-ți slujba",
+    "Opus tuum occide",
+    "Σκότωσε τη δουλειά σου",
+    "הרוג את העבודה שלך",
+    "अपने काम को मारो",
+    "તમારી નોકરીને મારી નાખો",
+    "உன் வேலையை கொல்",
+    "তোমার কাজকে মেরে ফেলো",
+    "ฆ่างานของคุณ",
+    "ฆ่าอาชีพของคุณ",
+    "ပယ်ဖျက် မင်းအလုပ်",
+    "Ua koj txoj haujlwm tuag",
+    "Uccidi il tuo lavoro",
+    "Ucide-ți serviciul",
+    "Öld meg az állásod",
+    "Öld meg a munkád",
+    "हत्या करो अपनी नौकरी की",
+    "მოკალი შენი სამუშაო",
+    "սպանիր քո աշխատանքը",
+    "ฆ่ากะทำงานของคุณ",
+    "Padayon sa pagpatay sa imong trabaho",
+    "Ua make kāu hana",
+    "Zabi swoją robotę",
+    "Drep jobben din",
+    "Убий работата си",
+    "Убиј свој посао",
+    "ฆ่างานประจำของคุณ",
+    "Kill your job",
+  ];
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
-  revealColumns.forEach((column) => {
-    const original = column.innerHTML;
-    column.insertAdjacentHTML("afterbegin", original.repeat(6));
-    column.insertAdjacentHTML("beforeend", original.repeat(6));
+  const appendPhrase = (column, phrase, index) => {
+    const span = document.createElement("span");
+    span.textContent = phrase;
+    if (phrase.toLowerCase() === "kill your job") {
+      span.className = "kill-english";
+    }
+    if (index % 3 === 0) {
+      column.prepend(span.cloneNode(true));
+    } else {
+      column.append(span);
+    }
+  };
+
+  originalColumns.forEach((column, index) => {
+    appendPhrase(column, extraPhrases[index % extraPhrases.length], index);
+    appendPhrase(column, extraPhrases[(index + 11) % extraPhrases.length], index + 1);
   });
 
-  const updateMeatReveal = () => {
+  if (textField) {
+    originalColumns.forEach((column, index) => {
+      const clone = column.cloneNode(true);
+      const drift = Number(column.dataset.drift || 0);
+      clone.dataset.drift = `${Math.round(drift * -0.82)}`;
+      clone.dataset.phase = `${(index * 137) % 360}`;
+      clone.dataset.speed = `${0.18 + (index % 5) * 0.035}`;
+      clone.querySelectorAll(".kill-target").forEach((target) => target.classList.remove("kill-target"));
+      appendPhrase(clone, extraPhrases[(index + 5) % extraPhrases.length], index + 2);
+      appendPhrase(clone, extraPhrases[(index + 17) % extraPhrases.length], index + 3);
+      textField.append(clone);
+    });
+  }
+
+  const revealColumns = meatReveal.querySelectorAll(".meat-reveal-column");
+
+  revealColumns.forEach((column, index) => {
+    column.dataset.phase = column.dataset.phase || `${(index * 73) % 360}`;
+    column.dataset.speed = column.dataset.speed || `${0.16 + (index % 6) * 0.03}`;
+    const original = column.innerHTML;
+    column.insertAdjacentHTML("afterbegin", original.repeat(8));
+    column.insertAdjacentHTML("beforeend", original.repeat(8));
+  });
+
+  const updateMeatReveal = (timestamp = 0) => {
     const rect = meatReveal.getBoundingClientRect();
     const travel = window.innerHeight + rect.height;
     const progress = clamp((window.innerHeight - rect.top) / travel, 0, 1);
@@ -190,9 +259,15 @@ if (!prefersReducedMotion && meatReveal) {
       locked ? "var(--machine-red)" : "var(--paper)"
     );
 
-    revealColumns.forEach((column) => {
+    revealColumns.forEach((column, index) => {
       const drift = Number(column.dataset.drift || 0);
-      const offset = locked ? 0 : clamp((0.58 - progress) * drift, -120, 120);
+      const speed = Number(column.dataset.speed || 0.18);
+      const phase = Number(column.dataset.phase || 0);
+      const direction = index % 2 === 0 ? 1 : -1;
+      const autoRange = 180;
+      const autoOffset = (((timestamp * speed * direction + phase) % (autoRange * 2)) + (autoRange * 2)) % (autoRange * 2) - autoRange;
+      const scrollOffset = clamp((0.58 - progress) * drift, -120, 120);
+      const offset = locked ? 0 : scrollOffset + autoOffset;
 
       column.style.setProperty("--meat-shift-y", `${offset.toFixed(1)}px`);
       column.style.setProperty("--meat-column-opacity", (0.34 + alignment * 0.36).toFixed(2));
@@ -203,9 +278,13 @@ if (!prefersReducedMotion && meatReveal) {
     }
   };
 
-  window.addEventListener("scroll", () => window.requestAnimationFrame(updateMeatReveal), { passive: true });
+  const animateMeatReveal = (timestamp) => {
+    updateMeatReveal(timestamp);
+    window.requestAnimationFrame(animateMeatReveal);
+  };
+
   window.addEventListener("resize", updateMeatReveal);
-  updateMeatReveal();
+  window.requestAnimationFrame(animateMeatReveal);
 }
 
 if (canHover && !prefersReducedMotion) {
