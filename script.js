@@ -265,8 +265,8 @@ if (!prefersReducedMotion && meatReveal) {
     const stagger = ((index % 4) - 1.5) * 0.42;
     column.style.setProperty("--meat-shift-x", `${stagger.toFixed(2)}rem`);
     const original = column.innerHTML;
-    column.insertAdjacentHTML("afterbegin", original.repeat(7));
-    column.insertAdjacentHTML("beforeend", original.repeat(7));
+    column.insertAdjacentHTML("afterbegin", original.repeat(12));
+    column.insertAdjacentHTML("beforeend", original.repeat(12));
   });
 
   const updateMeatReveal = (timestamp = 0) => {
@@ -287,9 +287,9 @@ if (!prefersReducedMotion && meatReveal) {
       const speed = Number(column.dataset.speed || 0.18);
       const phase = Number(column.dataset.phase || 0);
       const direction = index % 2 === 0 ? 1 : -1;
-      const autoRange = 180;
+      const autoRange = 92;
       const autoOffset = (((timestamp * speed * direction + phase) % (autoRange * 2)) + (autoRange * 2)) % (autoRange * 2) - autoRange;
-      const scrollOffset = clamp((0.58 - progress) * drift, -120, 120);
+      const scrollOffset = clamp((0.58 - progress) * drift, -96, 96);
       const offset = locked ? 0 : scrollOffset + autoOffset;
 
       column.style.setProperty("--meat-shift-y", `${offset.toFixed(1)}px`);

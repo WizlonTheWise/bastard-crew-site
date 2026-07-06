@@ -993,7 +993,7 @@ h3 {
 
 .meat-text-field {
   position: absolute;
-  inset: -28% -5vw -34% -4vw;
+  inset: -70% -5vw -78% -4vw;
   display: grid;
   grid-template-columns: repeat(48, minmax(0, 1fr));
   gap: clamp(0rem, 0.04vw, 0.04rem);
@@ -1362,7 +1362,7 @@ h3 {
   }
 
   .meat-text-field {
-    inset: -22% -8vw -30%;
+    inset: -62% -8vw -70%;
     grid-template-columns: repeat(22, minmax(0, 1fr));
     gap: 0.01rem;
   }
