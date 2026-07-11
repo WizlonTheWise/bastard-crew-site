@@ -2097,7 +2097,7 @@ h3 {
 
   .glyph-hero {
     min-height: auto;
-    background: linear-gradient(0deg, rgba(50, 51, 55, 0.96) 0 38%, var(--glyph-white) 38%);
+    background: linear-gradient(0deg, rgb(50, 51, 55) 0 38%, var(--glyph-white) 38%);
   }
 
   .glyph-hero h1 {
