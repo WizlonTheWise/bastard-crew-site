@@ -1686,6 +1686,7 @@ h3 {
   --glyph-paper: #f4f1e9;
   --glyph-red: #c9342f;
   --glyph-muted: #5a5650;
+  --glyph-plate-bg: #323337;
   background: var(--glyph-white);
   color: var(--glyph-black);
 }
@@ -1716,7 +1717,7 @@ h3 {
   gap: clamp(1rem, 3vw, 3rem);
   min-height: calc(100vh - 5rem);
   margin-left: 2rem;
-  background: linear-gradient(90deg, var(--glyph-white) 0 58%, rgba(5, 5, 5, 0.96) 58%);
+  background: linear-gradient(90deg, var(--glyph-white) 0 58%, var(--glyph-plate-bg) 58%);
   overflow: hidden;
 }
 
@@ -1763,8 +1764,7 @@ h3 {
   align-self: center;
   justify-self: center;
   width: min(34rem, 76%);
-  background: var(--glyph-black);
-  box-shadow: 1.2rem 1.2rem 0 rgba(5, 5, 5, 0.48);
+  background: var(--glyph-plate-bg);
 }
 
 .glyph-cover-stage img {
@@ -1937,7 +1937,7 @@ h3 {
   }
 
   .glyph-hero {
-    background: linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 42%, var(--glyph-white) 42%);
+    background: linear-gradient(0deg, var(--glyph-plate-bg) 0 42%, var(--glyph-white) 42%);
   }
 
   .glyph-cover-stage {
@@ -2097,7 +2097,7 @@ h3 {
 
   .glyph-hero {
     min-height: auto;
-    background: linear-gradient(0deg, rgb(50, 51, 55) 0 38%, var(--glyph-white) 38%);
+    background: linear-gradient(0deg, var(--glyph-plate-bg) 0 38%, var(--glyph-white) 38%);
   }
 
   .glyph-hero h1 {
@@ -2107,7 +2107,6 @@ h3 {
   .glyph-cover-stage {
     width: min(28rem, 82%);
     margin-bottom: 3rem;
-    box-shadow: 0.7rem 0.7rem 0 var(--glyph-black);
   }
 
   .glyph-method h2,
