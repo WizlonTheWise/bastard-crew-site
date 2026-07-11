@@ -1686,9 +1686,7 @@ h3 {
   --glyph-paper: #f4f1e9;
   --glyph-red: #c9342f;
   --glyph-muted: #5a5650;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
-    url("assets/glyph-bg.png") 0 0 / 14rem auto repeat;
+  background: var(--glyph-white);
   color: var(--glyph-black);
 }
 
@@ -1704,9 +1702,7 @@ h3 {
 
 .glyph-rail {
   border-right-color: rgba(5, 5, 5, 0.32);
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
-    url("assets/glyph-bg.png") 0 0 / 9rem auto repeat;
+  background: var(--glyph-white);
   color: var(--glyph-black);
 }
 
@@ -1720,9 +1716,7 @@ h3 {
   gap: clamp(1rem, 3vw, 3rem);
   min-height: calc(100vh - 5rem);
   margin-left: 2rem;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0 58%, rgba(5, 5, 5, 0.96) 58%),
-    url("assets/glyph-bg.png") 0 0 / 11rem auto repeat;
+  background: linear-gradient(90deg, var(--glyph-white) 0 58%, rgba(5, 5, 5, 0.96) 58%);
   overflow: hidden;
 }
 
@@ -1768,35 +1762,16 @@ h3 {
   display: grid;
   align-self: center;
   justify-self: center;
-  width: min(42rem, 82%);
-  padding: clamp(0.6rem, 1vw, 0.9rem);
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
-    url("assets/glyph-bg.png") center / 8rem auto repeat;
-  box-shadow: 1.2rem 1.2rem 0 var(--glyph-black);
+  width: min(34rem, 76%);
+  background: var(--glyph-black);
+  box-shadow: 1.2rem 1.2rem 0 rgba(5, 5, 5, 0.48);
 }
 
 .glyph-cover-stage img {
   display: block;
   width: 100%;
-  border: 1px solid var(--glyph-white);
-}
-
-.glyph-plates {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  margin-left: 2rem;
-  padding: 1px;
-  background: var(--glyph-black);
-}
-
-.glyph-plates img {
-  display: block;
-  width: 100%;
-  height: clamp(28rem, 48vw, 46rem);
+  aspect-ratio: 0.705;
   object-fit: cover;
-  background: var(--glyph-black);
   filter: contrast(1.04);
 }
 
@@ -1810,9 +1785,7 @@ h3 {
 }
 
 .glyph-method {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-    url("assets/glyph-bg.png") 0 0 / 10rem auto repeat;
+  background: var(--glyph-white);
 }
 
 .glyph-method h2,
@@ -1964,23 +1937,15 @@ h3 {
   }
 
   .glyph-hero {
-    background:
-      linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 42%, rgba(255, 255, 255, 0.94) 42%),
-      url("assets/glyph-bg.png") 0 0 / 10rem auto repeat;
+    background: linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 42%, var(--glyph-white) 42%);
   }
 
   .glyph-cover-stage {
     margin-bottom: 4rem;
   }
 
-  .glyph-plates,
   .glyph-method-grid {
     grid-template-columns: 1fr;
-  }
-
-  .glyph-plates img {
-    height: auto;
-    max-height: 44rem;
   }
 
 }
@@ -2125,7 +2090,6 @@ h3 {
   }
 
   .glyph-hero,
-  .glyph-plates,
   .glyph-method,
   .glyph-buy {
     margin-left: 0;
@@ -2133,9 +2097,7 @@ h3 {
 
   .glyph-hero {
     min-height: auto;
-    background:
-      linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 38%, rgba(255, 255, 255, 0.95) 38%),
-      url("assets/glyph-bg.png") 0 0 / 8rem auto repeat;
+    background: linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 38%, var(--glyph-white) 38%);
   }
 
   .glyph-hero h1 {
