@@ -6,7 +6,7 @@ const books = [
     coverImage: "assets/tmhmit-front-cover.png",
     description:
       "A game about killing the eldritch nightmare that is your job. Office procedureal, occult rituals, and a mess of deplorable corporate jargon.",
-    tags: ["66 pages", "A5", "Comedy horror"]
+    tags: ["Released", "A5", "Comedy horror", "Corporate Handbook"]
   },
   {
     title: "Clock Watchers",
@@ -15,7 +15,7 @@ const books = [
     coverImage: "assets/clock-watchers-cover.png",
     description:
       "A guidebook for ordinary people pressganged into interdimensional temporal espionage. Congratulations (insincere)",
-    tags: ["In development", "A5", "Loops"]
+    tags: ["In development", "A5", "Sci-Fi", "Time travel"]
   },
   {
     title: "Threads",
@@ -24,7 +24,7 @@ const books = [
     coverImage: "assets/threads-cover.jpg",
     description:
       "A reflective game for returning to retired characters and old campaigns, tracing the long ripples they left across people, places, and worlds.",
-    tags: ["Finished", "Solo / group", "Memory"]
+    tags: ["Released", "Solo / group", "Gameplay Tool"]
   },
   {
     title: "GLYPH",
@@ -33,7 +33,7 @@ const books = [
     coverImage: "assets/glyph-cover.jpg",
     description:
       "An artbook-grimoire for drawing personal magical symbols: vessels, lines of power, investitures, an introspective look at your own personal magical paradigm.",
-    tags: ["Finished", "23 pages", "Glyphcraft"]
+    tags: ["Released", "Introspective", "Occult", "Art"]
   },
   {
     title: "JAZZMANJI",
@@ -42,7 +42,7 @@ const books = [
     coverImage: "assets/jazzmanji-cover.jpg",
     description:
       "A fast-paced dice-and-card cassette crawl where your band burns through tracks, and tries to escape the accursed tape before the Jazzman gets the final solo.",
-    tags: ["Card game", "Dice", "Jazz health"]
+    tags: ["Released", "Cards / Dice", "Jazz"]
   }
 ];
 
