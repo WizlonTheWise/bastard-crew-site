@@ -54,7 +54,8 @@ const scrollFloatItems = document.querySelectorAll(".scroll-float");
 const bookPageLinks = {
   "This Machine Has Meat In It": "tmhmit.html",
   "Clock Watchers": "clock-watchers.html",
-  Threads: "threads.html"
+  Threads: "threads.html",
+  GLYPH: "glyph.html"
 };
 
 if (bookGrid) {

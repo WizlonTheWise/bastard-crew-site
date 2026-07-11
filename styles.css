@@ -1680,6 +1680,206 @@ h3 {
   margin-top: 0;
 }
 
+.glyph-page {
+  --glyph-black: #050505;
+  --glyph-white: #ffffff;
+  --glyph-paper: #f4f1e9;
+  --glyph-red: #c9342f;
+  --glyph-muted: #5a5650;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    url("assets/glyph-bg.png") 0 0 / 14rem auto repeat;
+  color: var(--glyph-black);
+}
+
+.glyph-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: var(--glyph-black);
+}
+
+.glyph-header .nav-cta {
+  background: var(--glyph-black);
+  color: var(--glyph-white);
+}
+
+.glyph-rail {
+  border-right-color: rgba(5, 5, 5, 0.32);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
+    url("assets/glyph-bg.png") 0 0 / 9rem auto repeat;
+  color: var(--glyph-black);
+}
+
+.glyph-page .eyebrow {
+  color: var(--glyph-red);
+}
+
+.glyph-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(20rem, 0.72fr);
+  gap: clamp(1rem, 3vw, 3rem);
+  min-height: calc(100vh - 5rem);
+  margin-left: 2rem;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0 58%, rgba(5, 5, 5, 0.96) 58%),
+    url("assets/glyph-bg.png") 0 0 / 11rem auto repeat;
+  overflow: hidden;
+}
+
+.glyph-hero-copy {
+  align-self: center;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4.5rem);
+}
+
+.glyph-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 14vw, 15rem);
+  font-weight: 700;
+  line-height: 0.78;
+  letter-spacing: 0;
+}
+
+.glyph-hero-copy > p:not(.eyebrow) {
+  max-width: 36rem;
+  margin: 1.4rem 0 0;
+  font-size: clamp(1.05rem, 1.35vw, 1.32rem);
+  line-height: 1.45;
+}
+
+.glyph-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.glyph-page .button.primary {
+  background: var(--glyph-black);
+  color: var(--glyph-white);
+}
+
+.glyph-page .button.secondary {
+  background: var(--glyph-white);
+  color: var(--glyph-black);
+}
+
+.glyph-cover-stage {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  width: min(42rem, 82%);
+  padding: clamp(0.6rem, 1vw, 0.9rem);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    url("assets/glyph-bg.png") center / 8rem auto repeat;
+  box-shadow: 1.2rem 1.2rem 0 var(--glyph-black);
+}
+
+.glyph-cover-stage img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--glyph-white);
+}
+
+.glyph-plates {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-left: 2rem;
+  padding: 1px;
+  background: var(--glyph-black);
+}
+
+.glyph-plates img {
+  display: block;
+  width: 100%;
+  height: clamp(28rem, 48vw, 46rem);
+  object-fit: cover;
+  background: var(--glyph-black);
+  filter: contrast(1.04);
+}
+
+.glyph-method,
+.glyph-buy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-left: 2rem;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 5vw, 4.5rem);
+}
+
+.glyph-method {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
+    url("assets/glyph-bg.png") 0 0 / 10rem auto repeat;
+}
+
+.glyph-method h2,
+.glyph-buy h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 6.6vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.glyph-method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.glyph-method-grid article {
+  min-height: 22rem;
+  padding: 1rem;
+  border: 1px solid var(--glyph-black);
+  background:
+    linear-gradient(0deg, transparent 0 68%, var(--glyph-black) 68%),
+    var(--glyph-white);
+}
+
+.glyph-method-grid span {
+  display: inline-grid;
+  width: 2.1rem;
+  aspect-ratio: 1;
+  place-items: center;
+  background: var(--glyph-white);
+  color: var(--glyph-black);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.glyph-method-grid h3 {
+  margin-top: 5.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.glyph-method-grid p {
+  color: var(--glyph-muted);
+}
+
+.glyph-buy {
+  align-items: end;
+  background: var(--glyph-black);
+  color: var(--glyph-white);
+}
+
+.glyph-buy .eyebrow {
+  color: var(--glyph-red);
+}
+
+.glyph-buy .button {
+  justify-self: start;
+  margin-top: 0;
+  background: var(--glyph-white);
+  color: var(--glyph-black);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1703,6 +1903,9 @@ h3 {
   .threads-hero,
   .threads-intro,
   .threads-buy,
+  .glyph-hero,
+  .glyph-method,
+  .glyph-buy,
   .about-section,
   .site-footer {
     grid-template-columns: 1fr;
@@ -1758,6 +1961,26 @@ h3 {
 
   .threads-hero-art {
     min-height: 36rem;
+  }
+
+  .glyph-hero {
+    background:
+      linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 42%, rgba(255, 255, 255, 0.94) 42%),
+      url("assets/glyph-bg.png") 0 0 / 10rem auto repeat;
+  }
+
+  .glyph-cover-stage {
+    margin-bottom: 4rem;
+  }
+
+  .glyph-plates,
+  .glyph-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glyph-plates img {
+    height: auto;
+    max-height: 44rem;
   }
 
 }
@@ -1817,7 +2040,10 @@ h3 {
   .clock-status,
   .threads-hero-copy,
   .threads-intro,
-  .threads-buy {
+  .threads-buy,
+  .glyph-hero-copy,
+  .glyph-method,
+  .glyph-buy {
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -1896,6 +2122,43 @@ h3 {
     width: auto;
     margin: -10rem 1rem 2rem;
     transform: none;
+  }
+
+  .glyph-hero,
+  .glyph-plates,
+  .glyph-method,
+  .glyph-buy {
+    margin-left: 0;
+  }
+
+  .glyph-hero {
+    min-height: auto;
+    background:
+      linear-gradient(0deg, rgba(5, 5, 5, 0.96) 0 38%, rgba(255, 255, 255, 0.95) 38%),
+      url("assets/glyph-bg.png") 0 0 / 8rem auto repeat;
+  }
+
+  .glyph-hero h1 {
+    font-size: clamp(4rem, 22vw, 7rem);
+  }
+
+  .glyph-cover-stage {
+    width: min(28rem, 82%);
+    margin-bottom: 3rem;
+    box-shadow: 0.7rem 0.7rem 0 var(--glyph-black);
+  }
+
+  .glyph-method h2,
+  .glyph-buy h2 {
+    font-size: clamp(2.6rem, 16vw, 4.8rem);
+  }
+
+  .glyph-method-grid article {
+    min-height: 16rem;
+  }
+
+  .glyph-method-grid h3 {
+    margin-top: 3.5rem;
   }
 
   .clock-briefing-grid article,
