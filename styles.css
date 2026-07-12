@@ -1844,19 +1844,73 @@ h3 {
 
 .glyph-buy {
   align-items: end;
+  grid-template-columns: minmax(0, 0.84fr) minmax(18rem, 1fr);
+  min-height: calc(100vh - 5rem);
   background: var(--glyph-black);
   color: var(--glyph-white);
+}
+
+.glyph-buy h2 {
+  max-width: 11.5ch;
+  font-size: clamp(3.25rem, 5.2vw, 6.6rem);
 }
 
 .glyph-buy .eyebrow {
   color: var(--glyph-red);
 }
 
+.glyph-buy-panel {
+  display: grid;
+  align-self: stretch;
+  grid-template-rows: 1fr auto;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  min-width: 0;
+}
+
+.glyph-vector-field {
+  position: relative;
+  display: grid;
+  min-height: clamp(24rem, 48vw, 40rem);
+  overflow: hidden;
+}
+
+.glyph-vector-field img {
+  position: absolute;
+  display: block;
+  width: min(36rem, 58%);
+  max-height: 72%;
+  object-fit: contain;
+  opacity: 0.92;
+  filter: invert(1) grayscale(1) contrast(1.12);
+}
+
+.glyph-vector-field img:nth-child(1) {
+  top: 2%;
+  left: 0;
+}
+
+.glyph-vector-field img:nth-child(2) {
+  top: 22%;
+  right: 4%;
+  width: min(38rem, 62%);
+}
+
+.glyph-vector-field img:nth-child(3) {
+  right: 20%;
+  bottom: 0;
+  width: min(32rem, 50%);
+}
+
 .glyph-buy .button {
   justify-self: start;
   margin-top: 0;
+  min-width: min(100%, 18rem);
+  padding: 1rem 1.35rem;
+  border: 2px solid var(--glyph-white);
   background: var(--glyph-white);
   color: var(--glyph-black);
+  text-align: center;
+  box-shadow: 0.45rem 0.45rem 0 var(--glyph-red);
 }
 
 .visually-hidden {
@@ -1948,6 +2002,18 @@ h3 {
 
   .glyph-cover-stage {
     margin-bottom: 4rem;
+  }
+
+  .glyph-buy {
+    min-height: auto;
+  }
+
+  .glyph-buy h2 {
+    max-width: 12ch;
+  }
+
+  .glyph-vector-field {
+    min-height: 28rem;
   }
 
   .glyph-method-grid {
@@ -2118,6 +2184,32 @@ h3 {
   .glyph-method h2,
   .glyph-buy h2 {
     font-size: clamp(2.6rem, 16vw, 4.8rem);
+  }
+
+  .glyph-buy-panel {
+    align-self: auto;
+  }
+
+  .glyph-vector-field {
+    min-height: 22rem;
+  }
+
+  .glyph-vector-field img {
+    width: min(21rem, 68%);
+    max-height: 74%;
+  }
+
+  .glyph-vector-field img:nth-child(2) {
+    width: min(22rem, 72%);
+  }
+
+  .glyph-vector-field img:nth-child(3) {
+    right: 4%;
+    width: min(18rem, 56%);
+  }
+
+  .glyph-buy .button {
+    width: 100%;
   }
 
   .glyph-method-grid article {
