@@ -57,34 +57,43 @@ const bookPageLinks = {
   Threads: "threads.html",
   GLYPH: "glyph.html"
 };
+const toDataCy = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
 if (bookGrid) {
   bookGrid.innerHTML = books
     .map(
-      (book) => `
-        <article class="book-card" tabindex="0">
+      (book) => {
+        const bookId = toDataCy(book.title);
+
+        return `
+        <article class="book-card" tabindex="0" data-cy="book-card-${bookId}">
           ${
             book.coverImage
-              ? `<img class="book-cover book-cover-image" src="${book.coverImage}" alt="">`
-              : `<div class="book-cover ${book.className}" aria-hidden="true">
+              ? `<img class="book-cover book-cover-image" src="${book.coverImage}" alt="" data-cy="book-cover-${bookId}">`
+              : `<div class="book-cover ${book.className}" aria-hidden="true" data-cy="book-cover-${bookId}">
                   <span>${book.label}</span>
                   <strong>${book.title}</strong>
                 </div>`
           }
           <div>
-            <h3>${book.title}</h3>
-            <p>${book.description}</p>
-            <div class="book-meta">
-              ${book.tags.map((tag) => `<span>${tag}</span>`).join("")}
+            <h3 data-cy="book-title-${bookId}">${book.title}</h3>
+            <p data-cy="book-description-${bookId}">${book.description}</p>
+            <div class="book-meta" data-cy="book-meta-${bookId}">
+              ${book.tags.map((tag, index) => `<span data-cy="book-tag-${bookId}-${index + 1}">${tag}</span>`).join("")}
             </div>
           </div>
           ${
             bookPageLinks[book.title]
-              ? `<a class="book-card-link" href="${bookPageLinks[book.title]}" aria-label="Open ${book.title} page"></a>`
+              ? `<a class="book-card-link" href="${bookPageLinks[book.title]}" aria-label="Open ${book.title} page" data-cy="book-link-${bookId}"></a>`
               : ""
           }
         </article>
-      `
+      `;
+      }
     )
     .join("");
 }

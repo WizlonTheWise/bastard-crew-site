@@ -11,22 +11,23 @@
     <link rel="icon" href="assets/polyhedral-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <aside class="page-rail" aria-hidden="true">
+  <body data-cy="page-home">
+    <aside class="page-rail" aria-hidden="true" data-cy="page-rail-home">
       <span>Books</span>
       <span>About</span>
       <span>Contact</span>
     </aside>
 
-    <header class="site-header" id="top">
-      <div class="brand">
-        <div class="logo-stack" aria-label="Project links">
+    <header class="site-header" id="top" data-cy="site-header">
+      <div class="brand" data-cy="site-brand">
+        <div class="logo-stack" aria-label="Project links" data-cy="logo-stack">
           <a
             class="logo-link logo-link-poly"
             href="https://bastardcrew.itch.io"
             target="_blank"
             rel="noreferrer"
             aria-label="Open Bastard Crew Games on itch.io"
+            data-cy="logo-bastard-crew"
           >
             <img src="assets/polyhedral-logo.svg" alt="">
           </a>
@@ -36,39 +37,40 @@
             target="_blank"
             rel="noreferrer"
             aria-label="Open Oddments on itch.io"
+            data-cy="logo-oddments"
           >
             <img src="assets/oddments-logomark.svg" alt="">
           </a>
         </div>
-        <a class="brand-copy" href="#top" aria-label="Bastard Crew x Oddments home">
+        <a class="brand-copy" href="#top" aria-label="Bastard Crew x Oddments home" data-cy="brand-home-link">
           <strong>Bastard Crew x Oddments</strong>
           <small>cluichí ról-imeartha / books, tools, notes</small>
         </a>
       </div>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#books">Books</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+      <nav class="main-nav" aria-label="Primary navigation" data-cy="primary-nav">
+        <a href="#books" data-cy="nav-books">Books</a>
+        <a href="#about" data-cy="nav-about">About</a>
+        <a class="nav-cta" href="#contact" data-cy="nav-contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
+      <section class="hero" aria-labelledby="hero-title" data-cy="home-hero">
+        <div class="hero-copy" data-cy="home-hero-copy">
           <p class="eyebrow">Independent tabletop roleplaying games / léiriú neamhspleách</p>
-          <h1 id="hero-title">Games about weird shit.</h1>
+          <h1 id="hero-title" data-cy="home-hero-title">Games about weird shit.</h1>
           <p>
             <strong>Bastard Crew x Oddments</strong> make existential tabletop roleplaying games about life,
             work, time, magic, memory, and the machinery society expect us to survive...
           </p>
           <p class="hero-jp" aria-label="Irish decorative label">leabhair / nótaí / saothair aisteacha</p>
           <div class="hero-actions">
-            <a class="button primary" href="#books">Browse books</a>
-            <a class="button secondary" href="#about">About the work</a>
+            <a class="button primary" href="#books" data-cy="hero-browse-books">Browse books</a>
+            <a class="button secondary" href="#about" data-cy="hero-about-work">About the work</a>
           </div>
         </div>
 
-        <div class="hero-art" aria-label="A typographic design composition for Bastard Crew Games">
+        <div class="hero-art" aria-label="A typographic design composition for Bastard Crew Games" data-cy="home-hero-art">
           <div class="hero-glyph scroll-float" data-depth="0.09" data-drift="-0.015" aria-hidden="true">
             <span class="glyph-ring"></span>
             <span class="glyph-stem"></span>
@@ -80,7 +82,7 @@
             <span></span>
             <span></span>
           </div>
-          <div class="award-badges scroll-float" data-depth="0.13" data-drift="0.018" aria-label="Awards badges">
+          <div class="award-badges scroll-float" data-depth="0.13" data-drift="0.018" aria-label="Awards badges" data-cy="award-badges">
             <img class="award-badge" src="assets/tmhmit-awards-badge.png" alt="The Awards 2023 badge">
             <img class="award-badge award-badge-2024" src="assets/awards-24-winner-badge-dark.png" alt="The Awards 2024 winner badge">
           </div>
@@ -88,26 +90,26 @@
         </div>
       </section>
 
-      <section class="section books-section" id="books" aria-labelledby="books-title">
+      <section class="section books-section" id="books" aria-labelledby="books-title" data-cy="books-section">
         <div class="section-heading">
           <p class="eyebrow">Books / saothair ealaíne</p>
-          <h2 id="books-title">Featured releases</h2>
+          <h2 id="books-title" data-cy="books-title">Featured releases</h2>
         </div>
 
-        <div class="book-grid" id="bookGrid"></div>
+        <div class="book-grid" id="bookGrid" data-cy="book-grid"></div>
       </section>
 
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="about-copy">
+      <section class="section about-section" id="about" aria-labelledby="about-title" data-cy="about-section">
+        <div class="about-copy" data-cy="about-copy">
           <p class="eyebrow">About / Maidir leis na húdair</p>
-          <h2 id="about-title">Printed under Oddments Publishing.</h2>
+          <h2 id="about-title" data-cy="about-title">Printed under Oddments Publishing.</h2>
           <p>
             Bastard Crew x Oddments puts together esoteric games with a mean little comic pulse: corporate horror,
             ritual magic, black comedy, reflection, introspection, and play as an act of art.
           </p>
         </div>
         <img class="about-creature scroll-float" data-depth="0.07" data-drift="-0.012" src="assets/tmhmit-vector-tentacle-guy.svg" alt="">
-        <dl class="stats">
+        <dl class="stats" data-cy="about-stats">
           <div>
             <dt>A5</dt>
             <dd>print-forward books</dd>
@@ -124,18 +126,18 @@
       </section>
     </main>
 
-    <footer class="site-footer" id="contact">
+    <footer class="site-footer" id="contact" data-cy="contact-section">
       <div>
         <p class="eyebrow">Stay in the loop / litreacha</p>
-        <h2>Join the mailing list to hear what we're up to.</h2>
+        <h2 data-cy="mailing-list-title">Join the mailing list to hear what we're up to.</h2>
       </div>
-      <form class="signup-form">
+      <form class="signup-form" data-cy="mailing-list-form">
         <label for="email">Email address</label>
         <div>
-          <input id="email" name="email" type="email" placeholder="you@example.com">
-          <button type="submit">Join list</button>
+          <input id="email" name="email" type="email" placeholder="you@example.com" data-cy="mailing-list-email">
+          <button type="submit" data-cy="mailing-list-submit">Join list</button>
         </div>
-        <p class="form-note">This doesn't work yet, sorry D:</p>
+        <p class="form-note" data-cy="mailing-list-note">This doesn't work yet, sorry D:</p>
       </form>
     </footer>
 

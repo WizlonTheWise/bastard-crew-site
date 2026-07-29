@@ -11,22 +11,23 @@
     <link rel="icon" href="assets/polyhedral-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="clock-page">
-    <aside class="page-rail clock-rail" aria-hidden="true">
+  <body class="clock-page" data-cy="page-clock-watchers">
+    <aside class="page-rail clock-rail" aria-hidden="true" data-cy="page-rail-clock-watchers">
       <span>Observe</span>
       <span>Loop</span>
       <span>Report</span>
     </aside>
 
-    <header class="site-header clock-header" id="top">
-      <div class="brand">
-        <div class="logo-stack" aria-label="Project links">
+    <header class="site-header clock-header" id="top" data-cy="site-header">
+      <div class="brand" data-cy="site-brand">
+        <div class="logo-stack" aria-label="Project links" data-cy="logo-stack">
           <a
             class="logo-link logo-link-poly"
             href="https://bastardcrew.itch.io"
             target="_blank"
             rel="noreferrer"
             aria-label="Open Bastard Crew Games on itch.io"
+            data-cy="logo-bastard-crew"
           >
             <img src="assets/polyhedral-logo.svg" alt="">
           </a>
@@ -36,39 +37,40 @@
             target="_blank"
             rel="noreferrer"
             aria-label="Open Oddments on itch.io"
+            data-cy="logo-oddments"
           >
             <img src="assets/oddments-logomark.svg" alt="">
           </a>
         </div>
-        <a class="brand-copy" href="index.html" aria-label="Bastard Crew Games home">
+        <a class="brand-copy" href="index.html" aria-label="Bastard Crew Games home" data-cy="brand-home-link">
           <strong>Bastard Crew x Oddments</strong>
           <small>unhinged causality</small>
         </a>
       </div>
-      <nav class="main-nav" aria-label="Clock Watchers page navigation">
-        <a href="index.html#books">Books</a>
-        <a href="#field-notes">Field notes</a>
-        <a class="nav-cta" href="#status">Status</a>
+      <nav class="main-nav" aria-label="Clock Watchers page navigation" data-cy="primary-nav">
+        <a href="index.html#books" data-cy="nav-books">Books</a>
+        <a href="#field-notes" data-cy="nav-field-notes">Field notes</a>
+        <a class="nav-cta" href="#status" data-cy="nav-status">Status</a>
       </nav>
     </header>
 
     <main>
-      <section class="clock-hero" aria-labelledby="clock-title">
-        <div class="clock-hero-copy">
+      <section class="clock-hero" aria-labelledby="clock-title" data-cy="clock-hero">
+        <div class="clock-hero-copy" data-cy="clock-hero-copy">
           <p class="eyebrow">Temporal espionage / guidebook for ordinary staff</p>
-          <h1 id="clock-title">Clock Watchers</h1>
+          <h1 id="clock-title" data-cy="clock-hero-title">Clock Watchers</h1>
           <p>
             A game manual for people who were not trained for this, were not told this could happen,
             and are now expected to behave professionally in several incompatible versions of last Tuesday.
           </p>
           <div class="clock-actions">
-            <a class="button primary" href="#field-notes">Read the briefing</a>
-            <a class="button secondary" href="#status">Check the file</a>
+            <a class="button primary" href="#field-notes" data-cy="clock-read-briefing">Read the briefing</a>
+            <a class="button secondary" href="#status" data-cy="clock-check-file">Check the file</a>
           </div>
         </div>
 
-        <div class="clock-hero-system" aria-label="Clock Watchers glyph system">
-          <div class="clock-hero-glyphs scroll-float" data-depth="0.07" data-drift="-0.01">
+        <div class="clock-hero-system" aria-label="Clock Watchers glyph system" data-cy="clock-hero-system">
+          <div class="clock-hero-glyphs scroll-float" data-depth="0.07" data-drift="-0.01" data-cy="clock-hero-glyphs">
             <figure>
               <img src="assets/clock-vector-car-man.svg" alt="Car Man glyph">
             </figure>
@@ -85,12 +87,12 @@
         </div>
       </section>
 
-      <section class="clock-briefing" id="field-notes" aria-labelledby="field-notes-title">
+      <section class="clock-briefing" id="field-notes" aria-labelledby="field-notes-title" data-cy="clock-field-notes-section">
         <div>
           <p class="eyebrow">Field notes / eat after reading</p>
-          <h2 id="field-notes-title">Did that clock just wink at me?</h2>
+          <h2 id="field-notes-title" data-cy="clock-field-notes-title">Did that clock just wink at me?</h2>
         </div>
-        <div class="clock-briefing-grid">
+        <div class="clock-briefing-grid" data-cy="clock-briefing-grid">
           <article>
             <span>01</span>
             <h3>Begin Loop.</h3>
@@ -114,7 +116,7 @@
         </div>
       </section>
 
-      <section class="clock-glyphs" aria-label="Clock Watchers glyph set">
+      <section class="clock-glyphs" aria-label="Clock Watchers glyph set" data-cy="clock-glyph-strip">
         <figure>
           <img src="assets/clock-vector-clock.svg" alt="Alarm clock glyph">
           <figcaption>Alarm</figcaption>
@@ -133,10 +135,10 @@
         </figure>
       </section>
 
-      <section class="clock-status" id="status" aria-labelledby="clock-status-title">
+      <section class="clock-status" id="status" aria-labelledby="clock-status-title" data-cy="clock-status-section">
         <div>
           <p class="eyebrow">Development status / wheels are still moving</p>
-          <h2 id="clock-status-title">Unfinished. Already late.</h2>
+          <h2 id="clock-status-title" data-cy="clock-status-title">Unfinished. Already late.</h2>
         </div>
       </section>
     </main>

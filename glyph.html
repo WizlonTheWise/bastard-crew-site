@@ -11,22 +11,23 @@
     <link rel="icon" href="assets/polyhedral-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="glyph-page">
-    <aside class="page-rail glyph-rail" aria-hidden="true">
+  <body class="glyph-page" data-cy="page-glyph">
+    <aside class="page-rail glyph-rail" aria-hidden="true" data-cy="page-rail-glyph">
       <span>Vessels</span>
       <span>Lines</span>
       <span>Investiture</span>
     </aside>
 
-    <header class="site-header glyph-header" id="top">
-      <div class="brand">
-        <div class="logo-stack" aria-label="Project links">
+    <header class="site-header glyph-header" id="top" data-cy="site-header">
+      <div class="brand" data-cy="site-brand">
+        <div class="logo-stack" aria-label="Project links" data-cy="logo-stack">
           <a
             class="logo-link logo-link-poly"
             href="https://bastardcrew.itch.io"
             target="_blank"
             rel="noreferrer"
             aria-label="Open Bastard Crew Games on itch.io"
+            data-cy="logo-bastard-crew"
           >
             <img src="assets/polyhedral-logo.svg" alt="">
           </a>
@@ -36,48 +37,49 @@
             target="_blank"
             rel="noreferrer"
             aria-label="Open Oddments on itch.io"
+            data-cy="logo-oddments"
           >
             <img src="assets/oddments-logomark.svg" alt="">
           </a>
         </div>
-        <a class="brand-copy" href="index.html" aria-label="Bastard Crew x Oddments home">
+        <a class="brand-copy" href="index.html" aria-label="Bastard Crew x Oddments home" data-cy="brand-home-link">
           <strong>Bastard Crew x Oddments</strong>
           <small>symbol work / occult art / personal majick</small>
         </a>
       </div>
-      <nav class="main-nav" aria-label="Glyph page navigation">
-        <a href="index.html#books">Books</a>
-        <a href="#method">Method</a>
-        <a class="nav-cta" href="#purchase">Get it</a>
+      <nav class="main-nav" aria-label="Glyph page navigation" data-cy="primary-nav">
+        <a href="index.html#books" data-cy="nav-books">Books</a>
+        <a href="#method" data-cy="nav-method">Method</a>
+        <a class="nav-cta" href="#purchase" data-cy="nav-get-it">Get it</a>
       </nav>
     </header>
 
     <main>
-      <section class="glyph-hero" aria-labelledby="glyph-title">
-        <div class="glyph-hero-copy">
+      <section class="glyph-hero" aria-labelledby="glyph-title" data-cy="glyph-hero">
+        <div class="glyph-hero-copy" data-cy="glyph-hero-copy">
           <p class="eyebrow">Occult artbook / personal magical dictionary</p>
-          <h1 id="glyph-title">GLYPH</h1>
+          <h1 id="glyph-title" data-cy="glyph-hero-title">GLYPH</h1>
           <p>
             An artbook-grimoire for drawing personal magical symbols: vessels,
             lines of power, and investments come together to construct a personal magical paradigm.
           </p>
           <div class="glyph-actions">
-            <a class="button primary" href="#method">Open the method</a>
-            <a class="button secondary" href="#purchase">Find the book</a>
+            <a class="button primary" href="#method" data-cy="glyph-open-method">Open the method</a>
+            <a class="button secondary" href="#purchase" data-cy="glyph-find-book">Find the book</a>
           </div>
         </div>
 
-        <div class="glyph-cover-stage" aria-label="Engraved cats and handwritten glyph marks">
+        <div class="glyph-cover-stage" aria-label="Engraved cats and handwritten glyph marks" data-cy="glyph-hero-art">
           <img src="assets/glyph-plate-cats.jpg" alt="Engraved cats and handwritten glyph marks">
         </div>
       </section>
 
-      <section class="glyph-method" id="method" aria-labelledby="glyph-method-title">
+      <section class="glyph-method" id="method" aria-labelledby="glyph-method-title" data-cy="glyph-method-section">
         <div>
           <p class="eyebrow">Method / vessels, lines, investitures</p>
-          <h2 id="glyph-method-title">A triumverate of symbolic construction</h2>
+          <h2 id="glyph-method-title" data-cy="glyph-method-title">A triumverate of symbolic construction</h2>
         </div>
-        <div class="glyph-method-grid">
+        <div class="glyph-method-grid" data-cy="glyph-method-grid">
           <article>
             <span>01</span>
             <h3>Define the vessel.</h3>
@@ -102,18 +104,18 @@
         </div>
       </section>
 
-      <section class="glyph-buy" id="purchase" aria-labelledby="glyph-buy-title">
+      <section class="glyph-buy" id="purchase" aria-labelledby="glyph-buy-title" data-cy="glyph-purchase-section">
         <div>
           <p class="eyebrow">Released / artbook-grimoire / occult process</p>
-          <h2 id="glyph-buy-title">Harness the power in the shape of the world, and channel it through ink and lead.</h2>
+          <h2 id="glyph-buy-title" data-cy="glyph-purchase-title">Harness the power in the shape of the world, and channel it through ink and lead.</h2>
         </div>
-        <div class="glyph-buy-panel">
-          <div class="glyph-vector-field" aria-hidden="true">
+        <div class="glyph-buy-panel" data-cy="glyph-buy-panel">
+          <div class="glyph-vector-field" aria-hidden="true" data-cy="glyph-vector-field">
             <img src="assets/glyph-vector-1.svg" alt="">
             <img src="assets/glyph-vector-2.svg" alt="">
             <img src="assets/glyph-vector-3.svg" alt="">
           </div>
-          <a class="button primary" href="https://oddmentsoh.itch.io/" target="_blank" rel="noreferrer">
+          <a class="button primary" href="https://oddmentsoh.itch.io/" target="_blank" rel="noreferrer" data-cy="glyph-visit-shelf">
             Visit the shelf
           </a>
         </div>

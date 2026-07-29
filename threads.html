@@ -11,22 +11,23 @@
     <link rel="icon" href="assets/polyhedral-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="threads-page">
-    <aside class="page-rail threads-rail" aria-hidden="true">
+  <body class="threads-page" data-cy="page-threads">
+    <aside class="page-rail threads-rail" aria-hidden="true" data-cy="page-rail-threads">
       <span>Memory</span>
       <span>Aftermath</span>
       <span>Ripple</span>
     </aside>
 
-    <header class="site-header threads-header" id="top">
-      <div class="brand">
-        <div class="logo-stack" aria-label="Project links">
+    <header class="site-header threads-header" id="top" data-cy="site-header">
+      <div class="brand" data-cy="site-brand">
+        <div class="logo-stack" aria-label="Project links" data-cy="logo-stack">
           <a
             class="logo-link logo-link-poly"
             href="https://bastardcrew.itch.io"
             target="_blank"
             rel="noreferrer"
             aria-label="Open Bastard Crew Games on itch.io"
+            data-cy="logo-bastard-crew"
           >
             <img src="assets/polyhedral-logo.svg" alt="">
           </a>
@@ -36,50 +37,51 @@
             target="_blank"
             rel="noreferrer"
             aria-label="Open Oddments on itch.io"
+            data-cy="logo-oddments"
           >
             <img src="assets/oddments-logomark.svg" alt="">
           </a>
         </div>
-        <a class="brand-copy" href="index.html" aria-label="Bastard Crew Games home">
+        <a class="brand-copy" href="index.html" aria-label="Bastard Crew Games home" data-cy="brand-home-link">
           <strong>Bastard Crew x Oddments</strong>
           <small>memory / aftermath / old stories</small>
         </a>
       </div>
-      <nav class="main-nav" aria-label="Threads page navigation">
-        <a href="index.html#books">Books</a>
-        <a href="#notes">Notes</a>
-        <a class="nav-cta" href="#purchase">Get it</a>
+      <nav class="main-nav" aria-label="Threads page navigation" data-cy="primary-nav">
+        <a href="index.html#books" data-cy="nav-books">Books</a>
+        <a href="#notes" data-cy="nav-notes">Notes</a>
+        <a class="nav-cta" href="#purchase" data-cy="nav-get-it">Get it</a>
       </nav>
     </header>
 
     <main>
-      <section class="threads-hero" aria-labelledby="threads-title">
-        <div class="threads-hero-copy">
+      <section class="threads-hero" aria-labelledby="threads-title" data-cy="threads-hero">
+        <div class="threads-hero-copy" data-cy="threads-hero-copy">
           <p class="eyebrow">Post-campaign play / memory map</p>
-          <h1 id="threads-title">Threads</h1>
+          <h1 id="threads-title" data-cy="threads-hero-title">Threads</h1>
           <p>
             A reflective tabletop roleplaying game about returning to a retired character
             and asking: What did the world do when we stopped watching?
           </p>
           <div class="threads-actions">
-            <a class="button primary" href="#notes">Read the notes</a>
-            <a class="button secondary" href="#purchase">Find the book</a>
+            <a class="button primary" href="#notes" data-cy="threads-read-notes">Read the notes</a>
+            <a class="button secondary" href="#purchase" data-cy="threads-find-book">Find the book</a>
           </div>
         </div>
 
-        <div class="threads-hero-art" aria-label="Tarot artwork from Threads">
+        <div class="threads-hero-art" aria-label="Tarot artwork from Threads" data-cy="threads-hero-art">
           <img class="threads-field" src="assets/threads-tarot.jpg" alt="Tarot figure artwork from Threads">
           <div class="threads-rule rule-one" aria-hidden="true"></div>
           <div class="threads-rule rule-two" aria-hidden="true"></div>
         </div>
       </section>
 
-      <section class="threads-intro" aria-labelledby="threads-intro-title">
+      <section class="threads-intro" aria-labelledby="threads-intro-title" data-cy="threads-intro-section">
         <div>
           <p class="eyebrow">What next? / after the applause</p>
-          <h2 id="threads-intro-title">The campaign ended, but the world did not.</h2>
+          <h2 id="threads-intro-title" data-cy="threads-intro-title">The campaign ended, but the world did not.</h2>
         </div>
-        <div class="threads-intro-panel">
+        <div class="threads-intro-panel" data-cy="threads-intro-panel">
           <p>
             Threads asks players to look back on old campaigns with affection, picking up on worlds where old characters have become history,
             and the places they change have kept changing in their wake.
@@ -92,11 +94,11 @@
         </div>
       </section>
 
-      <section class="threads-memory-spread" id="notes" aria-labelledby="threads-memory-title">
+      <section class="threads-memory-spread" id="notes" aria-labelledby="threads-memory-title" data-cy="threads-notes-section">
         <img src="assets/threads-glitched-mountains.jpg" alt="Glitched figure standing before mountains">
-        <div class="threads-memory-card">
+        <div class="threads-memory-card" data-cy="threads-notes-card">
           <p class="eyebrow">Notes and minutes / unreliable archaeology</p>
-          <h2 id="threads-memory-title">Consult the tome, consult yourself.</h2>
+          <h2 id="threads-memory-title" data-cy="threads-notes-title">Consult the tome, consult yourself.</h2>
           <p>
             Notes can tell you what happened, but memory tells you what it meant.
             Threads lives in the gap between the facts and the story your heart
@@ -105,12 +107,12 @@
         </div>
       </section>
 
-      <section class="threads-buy" id="purchase" aria-labelledby="threads-buy-title">
+      <section class="threads-buy" id="purchase" aria-labelledby="threads-buy-title" data-cy="threads-purchase-section">
         <div>
           <p class="eyebrow">Finished / solo or group / reflective play</p>
-          <h2 id="threads-buy-title">Return to the character and let the cards guide you.</h2>
+          <h2 id="threads-buy-title" data-cy="threads-purchase-title">Return to the character and let the cards guide you.</h2>
         </div>
-        <a class="button primary" href="https://bastardcrew.itch.io/" target="_blank" rel="noreferrer">
+        <a class="button primary" href="https://bastardcrew.itch.io/" target="_blank" rel="noreferrer" data-cy="threads-visit-shelf">
           Visit the shelf
         </a>
       </section>
