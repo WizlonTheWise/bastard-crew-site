@@ -757,6 +757,88 @@ h3 {
   color: var(--book-hover);
 }
 
+.tools-section {
+  background: var(--black);
+  color: var(--white);
+}
+
+.tools-section .section-heading {
+  align-items: start;
+}
+
+.tools-section .eyebrow {
+  color: var(--yellow);
+}
+
+.tool-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.32fr) minmax(0, 1fr) auto;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--white);
+  background: var(--black);
+}
+
+.tool-card-mark {
+  display: grid;
+  align-content: space-between;
+  min-height: 18rem;
+  padding: 1rem;
+  border-right: 1px solid var(--white);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 1.1rem,
+      rgba(255, 225, 0, 0.82) 1.1rem 1.35rem
+    ),
+    var(--black);
+  color: var(--yellow);
+  font-weight: 900;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.tool-card-mark span:first-child {
+  font-size: clamp(4.5rem, 11vw, 10rem);
+}
+
+.tool-card-mark span:last-child {
+  justify-self: end;
+  font-size: clamp(1.6rem, 4vw, 3.4rem);
+}
+
+.tool-card-copy {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  padding: clamp(1.4rem, 4vw, 3.6rem);
+}
+
+.tool-card-copy h3 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.6rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.tool-card-copy p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 0;
+  color: #d8d8d8;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.tool-card .button {
+  align-self: end;
+  margin: clamp(1rem, 2vw, 1.4rem);
+  background: var(--yellow);
+  color: var(--black);
+}
+
 .machine-page {
   --machine-red: #f25045;
   --machine-yellow: #fff200;
@@ -1939,6 +2021,7 @@ h3 {
   .glyph-hero,
   .glyph-method,
   .glyph-buy,
+  .tool-card,
   .about-section,
   .site-footer {
     grid-template-columns: 1fr;
@@ -2016,6 +2099,10 @@ h3 {
     min-height: 28rem;
   }
 
+  .tool-card .button {
+    justify-self: start;
+  }
+
   .glyph-method-grid {
     grid-template-columns: 1fr;
   }
@@ -2072,6 +2159,7 @@ h3 {
   .machine-reports,
   .meat-reveal-sticky,
   .machine-buy,
+  .tools-section,
   .clock-hero-copy,
   .clock-briefing,
   .clock-status,
@@ -2083,6 +2171,26 @@ h3 {
   .glyph-buy {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  .tool-card-mark {
+    min-height: 11rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--white);
+  }
+
+  .tool-card-copy {
+    padding: 1.1rem;
+  }
+
+  .tool-card-copy h3 {
+    max-width: 10ch;
+    font-size: clamp(2.4rem, 13vw, 4rem);
+  }
+
+  .tool-card .button {
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
   }
 
   .machine-hero {
