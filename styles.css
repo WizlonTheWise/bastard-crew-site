@@ -698,7 +698,7 @@ h3 {
 .book-card > div:last-child {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding-right: 0.5rem;
+  padding: 0 0.65rem 0.75rem;
 }
 
 .book-card p {
