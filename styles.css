@@ -648,7 +648,7 @@ h3 {
 .book-card {
   display:grid;
   grid-template-rows:auto 1fr auto;
-  padding:1rem;
+  padding:0.5rem;
 }
 
 .book-card p {
