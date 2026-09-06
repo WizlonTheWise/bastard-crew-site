@@ -535,7 +535,7 @@ h3 {
 .book-card::after {
   content: "";
   position: absolute;
-  inset: -0.35rem;
+  inset: 0;
   z-index: -1;
   background: var(--book-hover);
   opacity: 0;
@@ -555,13 +555,13 @@ h3 {
 .book-card:focus-visible::after,
 .book-card:focus-within::after {
   opacity: 1;
-  transform: translate(0.16rem, 0.16rem);
+  transform: translate(0, 0);
 }
 
 .book-card:focus-visible,
 .book-card:focus-within {
   outline: 2px solid var(--black);
-  outline-offset: 0.45rem;
+  outline-offset: 0;
 }
 
 .book-card-link {
