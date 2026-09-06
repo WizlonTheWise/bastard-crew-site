@@ -6,7 +6,7 @@ const books = [
     coverImage: "assets/tmhmit-front-cover.png",
     description:
       "A game about killing the eldritch nightmare that is your job. Office procedureal, occult rituals, and a mess of deplorable corporate jargon.",
-    tags: ["Released", "A5", "Comedy horror", "Corporate Handbook"]
+    tags: ["Released", "Comedy horror", "Corporate Handbook"]
   },
   {
     title: "Clock Watchers",
