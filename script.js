@@ -15,7 +15,7 @@ const books = [
     coverImage: "assets/clock-watchers-cover.png",
     description:
       "A guidebook for ordinary people pressganged into interdimensional temporal espionage. Congratulations (insincere)",
-    tags: ["In development", "A5", "Sci-Fi", "Time travel"]
+    tags: ["In development", "Sci-Fi", "Time travel"]
   },
   {
     title: "Threads",
