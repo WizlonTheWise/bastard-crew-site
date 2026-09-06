@@ -645,10 +645,10 @@ h3 {
   text-transform:uppercase
 }
 
-.book-card > div:last-child {
+.book-card {
   display:grid;
   grid-template-rows:auto 1fr auto;
-  padding:0 0.65rem 0.75rem
+  padding:1rem;
 }
 
 .book-card p {
