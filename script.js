@@ -39,7 +39,7 @@ const books = [
     title: "JAZZMANJI",
     label: "Cassette jam / cluiche cairti",
     className: "cover-jazzmanji",
-    coverImage: "assets/jazzmanji-cover.jpg",
+    coverImage: "assets/jazzmanji-masterless-back.png",
     description:
       "A fast-paced dice-and-card cassette crawl where your band burns through tracks, and tries to escape the accursed tape before the Jazzman gets the final solo.",
     tags: ["Released", "Cards / Dice", "Jazz"]
